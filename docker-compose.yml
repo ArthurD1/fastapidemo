@@ -1,0 +1,39 @@
+version: "3.8"
+services:
+  python-api:
+    image: jagaadapi:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_NAME: jagaad
+      DB_USERNAME: jagaad
+      DB_PASSWORD: jagaad
+      DB_PORT: 5432
+
+
+  db:
+    image: postgres:latest
+    restart: always
+    ports:
+      - 5432:5432
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "jagaad"]
+      interval: 20s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    environment:
+      POSTGRES_USER: jagaad
+      POSTGRES_PASSWORD: jagaad
+      POSTGRES_DB: jagaad
+    volumes:
+      - type: volume
+        source: pg-data
+        target: /var/lib/postgresql/data
+      - ./db:/docker-entrypoint-initdb.d
+
+volumes:
+  pg-data:
