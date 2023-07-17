@@ -1,7 +1,7 @@
 import pytest
 import os
 from sqlalchemy import create_engine
-from sqlalchemy.orm import Session, sessionmaker
+from sqlalchemy.orm import Session
 from app.models import Base, StatsMessage
 import psycopg2
 
@@ -105,6 +105,4 @@ def dbsession(engine, tables):
 
 @pytest.fixture(scope="session")
 def docker_compose_file(pytestconfig):
-    return os.path.join(
-        str(pytestconfig.rootdir), "app/tests/", "docker-compose.yml"
-    )
+    return os.path.join(str(pytestconfig.rootdir), "app/tests/", "docker-compose.yml")
