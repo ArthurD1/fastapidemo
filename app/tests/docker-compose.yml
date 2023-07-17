@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    ports:
+      - 5433:5433
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "listing"]
+      interval: 20s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    environment:
+      POSTGRES_USER: jagaad
+      POSTGRES_PASSWORD: jagaad
+      POSTGRES_DB: test
+      PGPORT: 5433
+
+volumes:
+  pg-data:
