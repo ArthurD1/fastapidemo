@@ -1,6 +1,6 @@
-# Jagaad Stats API
+# Stats API with Fast API
 
-The Jagaad Stats API is a REST API that collects and provides statistical information about processed messages in a system. It allows tracking the number of messages and the total amount processed for each customer ID and message type within a specified date interval.
+The Stats API is a REST API that collects and provides statistical information about processed messages in a system. It allows tracking the number of messages and the total amount processed for each customer ID and message type within a specified date interval.
 
 ## Table of Contents
 
