@@ -4,7 +4,7 @@ The Stats API is a REST API that collects and provides statistical information a
 
 ## Table of Contents
 
-- [Jagaad Stats API](#jagaad-stats-api)
+- [Stats API](#stats-api-with-fast-api)
   - [Table of Contents](#table-of-contents)
   - [Requirements](#requirements)
   - [Technologies Used](#technologies-used)
@@ -15,13 +15,13 @@ The Stats API is a REST API that collects and provides statistical information a
 
 ## Requirements
 
-To run the Jagaad Stats API, you need the following:
+To run the Stats API, you need the following:
 
 - Docker and Docker Compose
 
 ## Technologies Used
 
-The Jagaad Stats API is built using the following technologies:
+The Stats API is built using the following technologies:
 
 - Python: The programming language used to develop the API.
 - FastAPI: A modern, fast (high-performance), web framework for building APIs with Python.
@@ -31,7 +31,7 @@ The Jagaad Stats API is built using the following technologies:
 
 ## Usage
 
-To start the Jagaad Stats API, use the following command:
+To start the Stats API, use the following command:
 
 1.  Build the docker image
 
@@ -57,7 +57,7 @@ OR
 
 ## Testing
 
-To run the tests for the Jagaad Stats API, use the following command:
+To run the tests for the Stats API, use the following command:
 
 1. (Optionnal) Set up a virtual environment
 
