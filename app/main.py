@@ -12,8 +12,8 @@ from app.crud import (
 from typing import List, Annotated
 
 app = FastAPI(
-    title="Jagaad Stats API",
-    description="This is the API for the Jagaad application",
+    title="Stats API",
+    description="This is the API for the statsApi application",
     version="0.1.0",
 )
 

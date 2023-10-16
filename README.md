@@ -1,10 +1,10 @@
-# Stats API with Fast API
+# Stats API with Fast API (DEMO)
 
 The Stats API is a REST API that collects and provides statistical information about processed messages in a system. It allows tracking the number of messages and the total amount processed for each customer ID and message type within a specified date interval.
 
 ## Table of Contents
 
-- [Stats API](#stats-api-with-fast-api)
+- [Stats API with Fast API (DEMO)](#stats-api-with-fast-api-demo)
   - [Table of Contents](#table-of-contents)
   - [Requirements](#requirements)
   - [Technologies Used](#technologies-used)
@@ -36,7 +36,7 @@ To start the Stats API, use the following command:
 1.  Build the docker image
 
 ```bash
-$ docker build -t jagaadapi .
+$ docker build -t statsapi .
 ```
 
 2. Run the app with docker-compose

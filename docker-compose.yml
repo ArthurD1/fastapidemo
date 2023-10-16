@@ -1,16 +1,16 @@
 version: "3.8"
 services:
   python-api:
-    image: jagaadapi:latest
+    image: statsapi:latest
     ports:
       - "80:80"
     depends_on:
       - db
     environment:
       DB_HOST: db
-      DB_NAME: jagaad
-      DB_USERNAME: jagaad
-      DB_PASSWORD: jagaad
+      DB_NAME: dbname
+      DB_USERNAME: dbusername
+      DB_PASSWORD: dbpwd
       DB_PORT: 5432
 
 
@@ -20,15 +20,15 @@ services:
     ports:
       - 5432:5432
     healthcheck:
-      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "jagaad"]
+      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "dbname"]
       interval: 20s
       timeout: 5s
       retries: 5
       start_period: 15s
     environment:
-      POSTGRES_USER: jagaad
-      POSTGRES_PASSWORD: jagaad
-      POSTGRES_DB: jagaad
+      POSTGRES_USER: dbusername
+      POSTGRES_PASSWORD: dbpwd
+      POSTGRES_DB: dbname
     volumes:
       - type: volume
         source: pg-data

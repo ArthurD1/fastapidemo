@@ -5,8 +5,8 @@ from sqlalchemy.orm import Session
 from app.models import Base, StatsMessage
 import psycopg2
 
-DB_USERNAME = "jagaad"
-DB_PASSWORD = "jagaad"
+DB_USERNAME = "dbusername"
+DB_PASSWORD = "dbpwd"
 DB_HOST = "localhost"
 DB_PORT = 5433
 DB_NAME = "test"
